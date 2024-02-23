@@ -1,7 +1,6 @@
 function attachGradientEvents() {
   let result = document.getElementById("result");
   //the value of result should be rounded down and displayed as percentage
-  let gradient = document.getElementById("gradient");
   document.addEventListener("mousemove", gradientMove);
   document.addEventListener("mouseout", gradientOut);
   function gradientMove(event) {
@@ -10,5 +9,7 @@ function attachGradientEvents() {
     const percentage = Math.trunc(positionOfTheMouse * 100);
     result.textContent = percentage + "%";
   }
-  function gradientOut(event) {}
+  function gradientOut() {
+    document.getElementById("result").textContent = "";
+  }
 }
