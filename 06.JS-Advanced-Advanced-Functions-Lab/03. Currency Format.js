@@ -33,7 +33,7 @@ function currencyFormatter(separator, symbol, symbolFirst, value) {
   else return result + " " + symbol;
 }
 function createFormatter(separator, symbol, symbolFirst, formatter) {
-  //val4 = currencyFormatter
+  //val4 = currencyFormatter = formatter
   return function (value) {
     //returning a function creates a closure. It can be either anonymous or not. Names make it easier to debug - that's all.
     //The closure allows the anonymous function to remember and access the environment (variables, parameteres, and functions) in which it was created, even after the outer function has finished executing.
