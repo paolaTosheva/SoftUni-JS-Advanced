@@ -24,7 +24,7 @@
 //   return "placeholder";
 // });
 // console.log(myFormatter(23));
-// //statements vs. expressions
+// //declarations vs. expressions
 
 function currencyFormatter(separator, symbol, symbolFirst, value) {
   let result = Math.trunc(value) + separator;
@@ -32,9 +32,17 @@ function currencyFormatter(separator, symbol, symbolFirst, value) {
   if (symbolFirst) return symbol + " " + result;
   else return result + " " + symbol;
 }
-
-let dollarFormatter = createFormatter(",", "$", true, currencyFormatter);
+function createFormatter(separator, symbol, symbolFirst, formatter) {
+  //val4 = currencyFormatter
+  return function (value) {
+    //returning a function creates a closure. It can be either anonymous or not. Names make it easier to debug - that's all.
+    //The closure allows the anonymous function to remember and access the environment (variables, parameteres, and functions) in which it was created, even after the outer function has finished executing.
+    return formatter(separator, symbol, symbolFirst, value);
+  };
+}
+let dollarFormatter = createFormatter(",", "$", true, currencyFormatter); //expression
 console.log(dollarFormatter(5345)); // $ 5345,00
 console.log(dollarFormatter(3.1429)); // $ 3,14
 console.log(dollarFormatter(2.709)); // $ 2,71
 //dollarFormatter starts of as a variable but has a function assigned to it.
+//function declaration (what I did with function createFormatter) vs. function expression(what we have here - expressions are not hoisted)
