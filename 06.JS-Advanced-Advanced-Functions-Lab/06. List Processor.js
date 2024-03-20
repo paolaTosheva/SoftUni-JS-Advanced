@@ -22,9 +22,9 @@
 //     console.log(elements.join(","));
 //   }
 // }
-processor(["add hello", "add again", "remove hello", "add again", "print"]);
-console.log("-----------------");
-processor(["add pesho", "add george", "add peter", "remove peter", "print"]);
+// processor(["add hello", "add again", "remove hello", "add again", "print"]);
+// console.log("-----------------");
+// processor(["add pesho", "add george", "add peter", "remove peter", "print"]);
 //CORRECT
 //There's also another way:
 function createProcessor(input) {
