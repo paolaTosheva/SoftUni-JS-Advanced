@@ -114,3 +114,5 @@ createAndModify([
   "print c1",
   "print c2",
 ]);
+
+//Judge doesn't accept it for some reason.
