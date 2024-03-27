@@ -1,0 +1,17 @@
+{
+  "name": "07.js-advanced-unit-testing-and-error-handling-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "type":"module",
+  "scripts": {
+    "test": "mocha",
+    "watch": "mocha --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "mocha": "^10.3.0"
+  }
+}
