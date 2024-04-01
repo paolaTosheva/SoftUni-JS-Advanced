@@ -1,0 +1,17 @@
+{
+  "name": "09.js-advanced-prototypes-and-inheritance-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01.Person.js",
+   "type":"module",
+  "scripts": {
+    "test": "mocha",
+    "watch": "mocha --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "mocha": "^10.3.0"
+  }
+}
